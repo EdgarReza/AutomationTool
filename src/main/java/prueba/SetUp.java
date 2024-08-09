@@ -1,0 +1,22 @@
+package prueba;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class SetUp {
+	
+	WebDriver driver;
+	String path="C:\\Driver_browsers\\chromedriver_win32\\";
+	
+	public WebDriver iniciar() {
+		
+		System.setProperty("webdriver.chrome.driver", path+"chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.navigate().to("http://newtours.demoaut.com/mercuryregister.php");
+		
+		return driver;
+	}
+	
+}
